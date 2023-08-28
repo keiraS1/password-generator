@@ -6,9 +6,9 @@ var numericPrompt = ["1","2","3","4","5","6","7","8","9"];
 var specialCharacterPrompt = ["!","@","#","$","%","^","&","*","(",")","_", "+"];
 
 
-// Get references to the #generate element
+// Get references to the #generate element adds the action of when clicking the generate password button- prompts and alerts will come up
 var generateBtn = document.querySelector("#generate");
-
+//prompts to have the employee understand the conditions of generating a password
 generateBtn.addEventListener("click", function(){
 
   var firstAlert = document.querySelector("#generate");
@@ -25,16 +25,16 @@ var fourthAlert = document.querySelector("generate");
 
 });
 
+// prompts for certain criteria in password employee can choose
 function getPrompts () {
   optionPassword = [];
   // var numberVariables = document.querySelector("generate");
   passwordLength=parseInt(prompt("Please enter preferred length of password (8 to 128)"));
  if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
  alert("Value entered is not applicable for password length. Please enter a digit number from 8 to 128.")
- // console.log(numberVariables =nextInt());
  return false;
  }
- 
+
  if (confirm("The password should include uppercase letters. ex: ABC")){
    optionPassword = optionPassword.concat(upperCasePrompt);
  }
@@ -51,7 +51,6 @@ function getPrompts () {
  }
 
 
-// Write password to the #password input
 function writePassword() {
   var promptsWork = getPrompts(); //true or false if we get the prompts
 
@@ -59,12 +58,10 @@ function writePassword() {
   var passwordTwo = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = passwordTwo;
-  } else {
-    passwordText.value = "Invalid input";
-  }
 }
-
-function generatePassword() { // is the function to generate password
+}
+//this combines all the variables values that can be put together to form a password
+function generatePassword() { // is the function to generate password after at least one criteria was choosen
 var password = "";
 for (var i = 0; i < passwordLength; i++){
   var differentValues = Math.floor(Math.random()* optionPassword.length);
@@ -72,7 +69,6 @@ for (var i = 0; i < passwordLength; i++){
 } 
 return password;
 }
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
