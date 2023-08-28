@@ -6,7 +6,7 @@ This webpage is a refactored starter code. The purpose for this refactoring is t
 
 ![Picture of Password Generator webpage](./Screenshot/PasswordGeneratorpic.png)
 
-Webpage:*
+Webpage: https://keiras1.github.io/password-generator/
 
 ## Usage
 
@@ -14,7 +14,7 @@ This webpage is used to generate passwords, it can be very helpful in any settin
 
 ## Credit 
 
-The author of this starter code is **
+Starter code from "Xandromus" https://github.com/coding-boot-camp/friendly-parakeet .
 
 ## License
 Refer to license in repo

@@ -28,7 +28,6 @@ var fourthAlert = document.querySelector("generate");
 // prompts for certain criteria in password employee can choose
 function getPrompts () {
   optionPassword = [];
-  // var numberVariables = document.querySelector("generate");
   passwordLength=parseInt(prompt("Please enter preferred length of password (8 to 128)"));
  if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
  alert("Value entered is not applicable for password length. Please enter a digit number from 8 to 128.")
